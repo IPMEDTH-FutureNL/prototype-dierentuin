@@ -5,6 +5,7 @@ import '../../css/oplosmatrixHint.css';
 export class OplosmatrixHint extends Component{
 
 
+
     render(){
         return(
             <section className='oplosmatrixHint'>
@@ -13,6 +14,7 @@ export class OplosmatrixHint extends Component{
                 <p className='tigers'>Tijgers: 7 kilo vlees</p>
                 <p className='monkeys'>Apen: 4 bananen</p>
                 {/* img with solution */}
+               
             </section>
         )
     }

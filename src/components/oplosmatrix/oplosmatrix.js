@@ -10,7 +10,6 @@ export class Oplosmatrix extends Component{
     handleClickNote = () =>{
         window.location.href = '/oplosmatrixNote';
     }
-        
                 
     handleClickHint = () =>{
         window.location.href = '/oplosmatrixHint';     
@@ -18,7 +17,7 @@ export class Oplosmatrix extends Component{
 
     render(){
         return(
-            <section className=''>
+            <section className='oplosmatrix'>
                 <section className='clickable-lock' onClick={()=> this.handleClickLock()}>
                     slot
                 </section>
