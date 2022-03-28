@@ -23,9 +23,9 @@ import Ending from './components/gameplay/Ending';
           <Route path='/puzzleMap' element={ <DragAndDrop />} />
           <Route path='/oplosmatrixIntro' element={<OplosmatrixIntro />}/> 
           <Route path='/oplosmatrix' element ={<Oplosmatrix />} />
-          <Route path='/oplosmatrixSlot' element ={<OplosmatrixLock />} />
+          <Route path='/oplosmatrixLock' element ={<OplosmatrixLock />} />
           <Route path='/oplosmatrixHint' element ={<OplosmatrixHint />} />
-          <Route path='/oplosmatrixBrief' element ={<OplosmatrixNote />} />
+          <Route path='/oplosmatrixNote' element ={<OplosmatrixNote />} />
           <Route path='/end' element={ <Ending />} />
         </Routes>
        </div>

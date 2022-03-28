@@ -7,9 +7,12 @@ export class OplosmatrixHint extends Component{
 
     render(){
         return(
-            <section>
-                {/* img */}
-                <section>aaah!</section>
+            <section className='oplosmatrixHint'>
+                <p className='titel'>Voeding dieren:</p>
+                <p className='elephants'>Olifanten: 160 kilo gras</p>
+                <p className='tigers'>Tijgers: 7 kilo vlees</p>
+                <p className='monkeys'>Apen: 4 bananen</p>
+                {/* img with solution */}
             </section>
         )
     }

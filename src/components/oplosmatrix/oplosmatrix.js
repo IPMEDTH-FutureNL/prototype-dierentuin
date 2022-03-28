@@ -4,18 +4,28 @@ import '../../css/oplosmatrix.css';
 
 export class Oplosmatrix extends Component{
 
-    //switch statement om naar de andere pagina's te gaan
+    handleClickLock = () =>{
+        window.location.href = '/oplosmatrixLock';
+    }
+    handleClickNote = () =>{
+        window.location.href = '/oplosmatrixNote';
+    }
+        
+                
+    handleClickHint = () =>{
+        window.location.href = '/oplosmatrixHint';     
+    }
 
     render(){
         return(
             <section className=''>
-                <section className='clickable-lock' onClick={()=> this.handleOnClick()}>
+                <section className='clickable-lock' onClick={()=> this.handleClickLock()}>
                     slot
                 </section>
-                <section className='clickable-note' onClick={()=> this.handleOnClick()}>
+                <section className='clickable-note' onClick={()=> this.handleClickNote()}>
                     note
                 </section>
-                <section className='clickable-hint' onClick={()=> this.handleOnClick()}>
+                <section className='clickable-hint' onClick={()=> this.handleClickHint()}>
                     hint
                 </section>
 
