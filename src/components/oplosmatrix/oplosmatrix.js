@@ -1,6 +1,9 @@
 //main page
 import React, { Component } from 'react';
 import '../../css/oplosmatrix.css';
+import Lock from '../../img/lock.png'
+import Hintpaper from '../../img/ripped-paper.png'
+import Notepaper from '../../img/torn-paper.png'
 
 export class Oplosmatrix extends Component{
 
@@ -19,13 +22,13 @@ export class Oplosmatrix extends Component{
         return(
             <section className='oplosmatrix'>
                 <section className='clickable-lock' onClick={()=> this.handleClickLock()}>
-                    slot
+                    <img className='lock'src={Lock}></img>
                 </section>
                 <section className='clickable-note' onClick={()=> this.handleClickNote()}>
-                    note
+                    <img className='notepaper' src={Notepaper}></img>
                 </section>
                 <section className='clickable-hint' onClick={()=> this.handleClickHint()}>
-                    hint
+                    <img className='hintpaper' src={Hintpaper}></img>
                 </section>
 
             </section>

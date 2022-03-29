@@ -4,6 +4,9 @@ import '../../css/oplosmatrixHint.css';
 
 export class OplosmatrixHint extends Component{
 
+    returnMainScreen = () =>{
+        window.location.href= ("/oplosmatrix")
+    }
 
 
     render(){
@@ -15,6 +18,7 @@ export class OplosmatrixHint extends Component{
                 <p className='monkeys'>Apen: 4 bananen</p>
                 {/* img with solution */}
                
+                <button className='exitButton' onClick={this.returnMainScreen}>x</button>
             </section>
         )
     }

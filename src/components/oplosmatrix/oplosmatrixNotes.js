@@ -7,6 +7,10 @@ import monkeyIcon from'../../img/monkeyIcon.png';
 
 export class OplosmatrixNotes extends Component{
 
+    returnMainScreen = () =>{
+        window.location.href= ("/oplosmatrix")
+    }
+
     render(){
         return(
             <section className='note'>
@@ -40,7 +44,7 @@ export class OplosmatrixNotes extends Component{
 
                     </div>
                 </section>
-               
+                <button className='exitButton' onClick={this.returnMainScreen}>x</button>
             </section>
             
         )
