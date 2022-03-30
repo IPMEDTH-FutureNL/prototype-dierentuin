@@ -15,8 +15,17 @@
     margin:0;
 }
 
-.elephants, .tigers, .monkeys{
+.elephants{
     margin-top: 2rem;
+    color:#ffc857;
+}
+.tigers{
+    margin-top: 2rem;
+    color:#db3a34;
+} 
+.monkeys{
+    margin-top: 2rem;
+    color: #084c61;
 }
 
 .exitButton{

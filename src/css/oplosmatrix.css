@@ -8,24 +8,24 @@
 }
 
 .lock{
-    width:60px;
-    height: 60px;
+    width:4rem;
+    height: 4rem;
     position: absolute;
     top:60vh;
     right:48vw;
 }
 
 .hintpaper{
-    width:80px;
-    height:80px;
+    width:5rem;
+    height:5rem;
     position: absolute;
     top:25vh;
     right:30vw;
 }
 
 .notepaper{
-    width:80px;
-    height:80px;
+    width:5rem;
+    height:5rem;
     position: absolute;
     top:60vh;
     left:20vw;

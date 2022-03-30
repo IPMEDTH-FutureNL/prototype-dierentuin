@@ -6,7 +6,7 @@ import '../../css/oplosmatrixLock.css';
 const OplosMatrixLock = () => {
     const navigate = useNavigate();
     
-    const answerLock = 490;
+    const answerLock = 279;
 
     const solveLock = (e) =>{
         e.preventDefault();
