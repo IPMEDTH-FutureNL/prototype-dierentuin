@@ -10,12 +10,12 @@ body{
     left:0;
 }
 
-/*.lock{
+/* .lock{
     width: 10vw;
     position: relative;
     top: 50vh;
     left: 25vh;
-}*/
+} */
 
 .absolute{
     position: absolute;
@@ -73,9 +73,9 @@ body{
     padding: 1rem;
     border-radius: 20px;
     width: 50vw;
-    height: 50vh;
+    height: 55vh;
     left: 50%;
-    transform: translate(50%, 50%);
+    transform: translate(50%, 45%);
 }
 
 .modal-lock-section-label{
@@ -112,18 +112,22 @@ body{
     transform: translate(50%);
 }
 
+.list{
+    list-style: none;
+}
+
 .scroll-questions{
-    width: 4vw;
+    width: 8vw;
     position: relative;
-    top: 85vh;
-    left: 40vw;
+    top: 81vh;
+    left: 36vw;
 }
 
 .scroll-notes{
-    width: 4vw;
+    width: 8vw;
     position: relative;
     top: 70vh;
-    right: 43vw;
+    right: 41vw;
 }
 
 .scroll{

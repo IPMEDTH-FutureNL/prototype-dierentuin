@@ -21,6 +21,7 @@
     position: absolute;
     top:25vh;
     right:30vw;
+    cursor: pointer;
 }
 
 .notepaper{
@@ -29,4 +30,5 @@
     position: absolute;
     top:60vh;
     left:20vw;
+    cursor: pointer;
 }
