@@ -23,7 +23,8 @@ import OplosmatrixHint from './components/oplosmatrix/OplosmatrixHint';
      <Router>
        <div className="App">
         <Routes>
-          <Route path="/" element ={<Start></Start>} />
+        <Route path="/" element={ <Intro />} />
+          <Route path="/start" element={<Start></Start>} />
           <Route path='/firstPuzzle' element={<OvergangPuzzelEen />} />
           <Route path='/puzzleMap' element={ <DragAndDrop />} />
           <Route path='/elephantEntry' element={ <ElephantEntry />} />

@@ -82,6 +82,10 @@
     font-size: 18px;
 }
 
+.button:hover{
+    cursor: pointer;
+}
+
 .zookeeper-div2{
     display: none;
     flex-direction: row;
@@ -123,6 +127,10 @@
     border: none;
     font-size: 20px;
     margin-left: 100px;
+}
+
+.button-primary:hover{
+    cursor: pointer;
 }
 
 /*puzzel*/
@@ -192,6 +200,10 @@
     margin-left: -50px;
 }
 
+.buttonOlifanten:hover{
+    cursor: pointer;
+}
+
 .secondary{
     padding-top: 10px;
     padding-bottom: 10px;
@@ -205,15 +217,26 @@
     font-size: 20px;
 }
 
+.secondary:hover{
+    cursor: pointer;
+}
+
 .hintButton{
     position: absolute;
     right: 50px;
-    top: 25px;
-    
+    top: 25px;  
+}
+
+.hintButton:hover{
+    cursor: pointer;
 }
 
 .buttonHint{
     color: white;
     width: 35px;
     height: 35px;
+}
+
+.buttonHint:hover{
+    cursor: pointer;
 }
