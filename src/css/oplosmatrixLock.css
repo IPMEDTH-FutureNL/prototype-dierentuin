@@ -1,0 +1,47 @@
+.oplosmatrixLock{
+    font-size: x-large;
+    background-image: url(../img/darkWoodBackground.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100vh;}
+
+.containerLock{
+    display:block;
+    margin: auto;
+    padding-top: 30vh;
+    width:20vh;
+}
+
+.containerForm{
+    width: 20vw;
+    height: 20vw;
+    background-color: rgb(231, 173, 12);
+}
+
+.containerNumber{
+    padding-top: 50%;
+}
+
+.number{
+    -webkit-appearance: none;
+    margin: 0 2%;
+    width: 15%;
+    padding: 10px;
+    height: auto;
+    border-radius: 6px;
+}
+
+.buttonSubmit{
+    border-radius: 6px;
+    padding: 4px;
+    margin-top: 5%;
+}
+
+.exitButton{
+    position: absolute;
+    right: 25px;
+    top:25px;
+    padding:20px;
+    border-radius: 15px;
+}

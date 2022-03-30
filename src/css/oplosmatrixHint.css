@@ -1,0 +1,35 @@
+
+.oplosmatrixHint{
+    background-image: url(../img/paper.jpg) ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+
+    font-size: xx-large;
+}
+
+
+.titel{
+    font-weight: bold;
+    margin:0;
+}
+
+.elephants{
+    margin-top: 2rem;
+    color:#ffc857;
+}
+.tigers{
+    margin-top: 2rem;
+    color:#db3a34;
+} 
+.monkeys{
+    margin-top: 2rem;
+    color: #084c61;
+}
+
+.exitButton{
+    position: absolute;
+    right: 25px;
+    top:25px;
+}
