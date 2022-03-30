@@ -28,7 +28,7 @@ export class OplosmatrixIntro extends Component{
     render(){
         return(
             <section className='introDiv'>
-                <section className='intro'>
+                <section className='oplosmatrixintro'>
                     <div className='zookeeper-div'>
                         <img className='zookeeper-img' src = {zookeeperImage}/>
                         <img className='text-cloud' src = {textCloud} />
