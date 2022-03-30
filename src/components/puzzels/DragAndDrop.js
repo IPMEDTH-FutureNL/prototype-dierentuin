@@ -14,10 +14,14 @@ export class DragAndDrop extends Component {
     super(props);
     this.state = {
       count : 0,
+      buttonText: "Toon button olifanten verblijf"
     }
 }
 
-
+componentDidMount = () => {
+  let showSolutionOverlay = document.getElementById("startPopUpSolution");
+  showSolutionOverlay.style.display = "none";
+}
 
 
 
@@ -62,12 +66,39 @@ drop = (e) =>
       console.log(this.state.count);
 
       if(this.state.count === 5){
-        let showButton = document.getElementById("buttonOlifanten");
-        showButton.style.display = "block";
+        let showSolutionOverlay = document.getElementById("startPopUpSolution");
+        showSolutionOverlay.style.display = "block";
       }
   }
   else{
      alert("Dat is helaas niet goed, probeer het nog een keer!");
+  }
+}
+
+hideSolutionDiv = () => {
+  let showButton = document.getElementById("buttonOlifanten");
+  let showSolutionOverlay = document.getElementById("startPopUpSolution");
+  showSolutionOverlay.style.display = "none";
+  showButton.style.display = "block";
+}
+
+handleAnswer = (answerNumber) => {
+  let onjuist = document.getElementById("antwoordenGroep-onjuist");
+  let juist = document.getElementById("antwoordenGroep-juist");
+  let antwoordenGroepButton = document.getElementById("button-group-second");
+
+  if(answerNumber === 1){
+    this.setState({ textAnswers : "met CTRL + SHIFT + N open je privé scherm."})
+    onjuist.style.display = "block";
+    juist.style.display = "none";
+  }if(answerNumber === 2){
+    this.setState({ textAnswers : "met CTRL + N open je een geheel nieuw scherm."})
+    onjuist.style.display = "block";
+    juist.style.display = "none";
+  }if(answerNumber === 3){
+    onjuist.style.display = "none";
+    juist.style.display = "block";
+    antwoordenGroepButton.style.display = "block";
   }
 }
 
@@ -93,6 +124,7 @@ drop = (e) =>
             </div>
 
 
+
           <div className="overlay" id="overlay">hiddentext</div>
             <div className="startPopUp" id="startPopUp">
                 <div className="intro-kaartPuzzle">
@@ -102,6 +134,29 @@ drop = (e) =>
                     <p>Voordat we weten hoe we bij het olifanten verblijf komen, moeten we de stukje aan elkaar leggen.</p>
                     <div className="buttonGroup">
                         <button className="button" onClick={() => {this.hideOverLay()}}>Los op!</button>
+                    </div>
+              </div>
+          </div>
+
+          <div className="overlay" id="overlaySolution">hiddentext</div>
+            <div className="startPopUp" id="startPopUpSolution">
+                <div className="intro-kaartPuzzle">
+                    <h1 className="headerOne-solution">
+                        Goed gedaan je hebt de kaart opgelost!
+                    </h1>
+                    <p>Om naar het olifanten verblijf te gaan moet de volgende vraag worden beantwoord.</p>
+                    <p>Met welke control toets op je toetsenbord open je een nieuw tablad</p>
+                    <div className="antwooordenGroep">
+                        <div className="antwoordenGroep-buttons">
+                          <button className="button-answer" onClick={() => this.handleAnswer(1)}>CTRL + SHIFT + N</button>
+                          <button className="button-answer" onClick={() => this.handleAnswer(2)}>CTRL + N</button>
+                          <button className="button-answer" onClick={() => this.handleAnswer(3)}>CTRL + T</button>
+                        </div>
+                        <p className="antwoordenGroep-juist" id="antwoordenGroep-juist">Dat is goed met CTRL + T kan je een nieuw tablad openen in je scherm!</p>
+                        <p className="antwoordenGroep-onjuist" id="antwoordenGroep-onjuist">Helaas dat is niet goed {this.state.textAnswers}</p>
+                    </div>
+                    <div className="button-group-second" id="button-group-second">
+                      <button className="button-primary" onClick={() =>  this.hideSolutionDiv()}>{this.state.buttonText}</button>
                     </div>
               </div>
           </div>
