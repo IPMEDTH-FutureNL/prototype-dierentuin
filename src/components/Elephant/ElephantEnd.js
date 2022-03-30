@@ -12,7 +12,7 @@ const ElephantEnd = () => {
     }
 
     const right = () => {
-        navigate("/elephantInside") //ROUTE VAN NILESH
+        navigate("/oplosmatrixIntro") //ROUTE VAN NILESH
     }
 
   return (

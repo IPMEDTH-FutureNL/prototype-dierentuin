@@ -31,7 +31,7 @@
     height: 250px;
     border-radius: 10px;
     top: 250px;
-    left: 600px;
+    left: 500px;
     text-align: left !important;
     display: flex;
     flex-direction: column;
@@ -96,14 +96,14 @@
 .text-cloud{
     position: absolute;
     width: 800px;
-    bottom: 350px;
+    bottom: 170px;
     left: 300px;
 }
 
 .textCloud-innertext{
     position: absolute;
     width: 800px;
-    bottom: 580px;
+    top: 150px;
     left: 570px;
     width: 300px;
     text-align: left;
