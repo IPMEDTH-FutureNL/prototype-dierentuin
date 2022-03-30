@@ -54,8 +54,7 @@ drop = (e) =>
 {
   e.preventDefault();
         var image =e.dataTransfer.getData("content");
-  if (e.target.id == document.getElementById(image).getAttribute('data-div')){ 
-      alert("ok");          
+  if (e.target.id === document.getElementById(image).getAttribute('data-div')){       
       e.target.appendChild(document.getElementById(image));
       let changeOpacity = document.getElementById(e.target.id);
       changeOpacity.style.opacity = "1";
@@ -68,7 +67,7 @@ drop = (e) =>
       }
   }
   else{
-     alert("wrong");
+     alert("Dat is helaas niet goed, probeer het nog een keer!");
   }
 }
 

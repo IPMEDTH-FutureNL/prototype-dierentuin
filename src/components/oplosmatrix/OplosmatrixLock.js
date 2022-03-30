@@ -6,7 +6,7 @@ import '../../css/oplosmatrixLock.css';
 const OplosMatrixLock = () => {
     const navigate = useNavigate();
     
-    const answerLock = 490;
+    const answerLock = 279;
 
     const solveLock = (e) =>{
         e.preventDefault();
@@ -14,11 +14,14 @@ const OplosMatrixLock = () => {
 
         if (codeString == answerLock){
             console.log('gefeliciteerd')
-            window.location.href = "/end";
-            //navigate naar volgende pagina
+            navigate('/end')
         } else {
             console.log('jammer, probeer het nog maar een keer')
         }
+    }
+
+    const returnMainScreen = () =>{
+        navigate("/oplosmatrix")
     }
     
     const handleSubmit = (e) => {
@@ -37,15 +40,20 @@ const OplosMatrixLock = () => {
     }
 
     return(
-        <section>
-            <form onSubmit={solveLock}>
-                {/* <label htmlFor='lname'>Weer een slot!? wat zou dit moeten zijn?</label> */}
-                <input className="number" index="1" type="number" min="0" max="9"></input>
-                <input className="number" index="1" type="number" min="0" max="9"></input>
-                <input className="number" index="1" type="number" min="0" max="9"></input>
-
-                <input type="submit" value="Invoeren"></input>
+        <section className='oplosmatrixLock'>
+            <section className='containerLock'>
+                <form className='containerForm' onSubmit={solveLock}>
+                    <section className='containerNumber'>
+                        <input className="number" index="1" type="number" min="0" max="9"></input>
+                        <input className="number" index="1" type="number" min="0" max="9"></input>
+                        <input className="number" index="1" type="number" min="0" max="9"></input>
+                    </section>
+                    <input className='buttonSubmit' type="submit" value="Invoeren"></input>
             </form>
+
+            </section>
+            
+            <button className='exitButton' onClick={returnMainScreen}>x</button>
         </section>
     )
 }

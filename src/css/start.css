@@ -20,14 +20,14 @@
 .text-cloud{
     position: absolute;
     width: 800px;
-    bottom: 350px;
+    bottom: 170px;
     left: 300px;
 }
 
 .textCloud-innertext{
     position: absolute;
     width: 800px;
-    bottom: 580px;
+    
     left: 570px;
     width: 300px;
     text-align: left;

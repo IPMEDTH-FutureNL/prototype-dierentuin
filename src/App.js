@@ -17,12 +17,13 @@ import OplosmatrixLock from './components/oplosmatrix/OplosmatrixLock';
 import OplosmatrixNote from './components/oplosmatrix/OplosmatrixNotes';
 import OplosmatrixHint from './components/oplosmatrix/OplosmatrixHint';
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
+
+  function App() {
+   return(
+     <Router>
+       <div className="App">
         <Routes>
-          <Route path="/" element={ <Intro />} />
+        <Route path="/" element={ <Intro />} />
           <Route path="/start" element={<Start></Start>} />
           <Route path='/firstPuzzle' element={<OvergangPuzzelEen />} />
           <Route path='/puzzleMap' element={ <DragAndDrop />} />
@@ -32,12 +33,12 @@ function App() {
           <Route path='/elephantEnd' element={ <ElephantEnd />} />
           <Route path='/oplosmatrixIntro' element={<OplosmatrixIntro />}/> 
           <Route path='/oplosmatrix' element ={<Oplosmatrix />} />
-          <Route path='/oplosmatrixSlot' element ={<OplosmatrixLock />} />
+          <Route path='/oplosmatrixLock' element ={<OplosmatrixLock />} />
           <Route path='/oplosmatrixHint' element ={<OplosmatrixHint />} />
-          <Route path='/oplosmatrixBrief' element ={<OplosmatrixNote />} />
+          <Route path='/oplosmatrixNote' element ={<OplosmatrixNote />} />
           <Route path='/end' element={ <Ending />} />
         </Routes>
-      </div>
+       </div>
     </Router>
   )
 }
