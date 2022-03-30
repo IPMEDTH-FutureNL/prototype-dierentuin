@@ -8,7 +8,6 @@ import elephantEntry from '../../img/elephantEntry.png'
 import lock from '../../img/lock.png'
 import arrowRight from '../../img/arrowRight.png'
 import arrowLeft from '../../img/arrowLeft.png'
-import arrowBottom from '../../img/arrowBottom.png'
 
 const ElephantEntry = () => {
 
@@ -32,9 +31,6 @@ const ElephantEntry = () => {
         navigate("/elephantLeft")
     }
 
-    const goBack = () => {
-        navigate("/puzzleMap")
-    }
    
   return (
     <section>
@@ -43,7 +39,6 @@ const ElephantEntry = () => {
             <img className="lock" onClick={setModalIsOpenToTrue} src={lock}/>
             <img className="arrow-right" src={arrowRight} onClick={goRight}/>
             <img className="arrow-left" src={arrowLeft} onClick={goLeft}/>
-            <img className="arrow-bottom" src={arrowBottom} onClick={goBack}/>
 
             <Modal className="modal-lock" isOpen={modalIsOpen}>
                 <button onClick={setModalIsOpenToFalse}>x</button>
