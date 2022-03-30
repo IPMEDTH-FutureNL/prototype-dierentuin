@@ -17,7 +17,6 @@ import OplosmatrixLock from './components/oplosmatrix/OplosmatrixLock';
 import OplosmatrixNote from './components/oplosmatrix/OplosmatrixNotes';
 import OplosmatrixHint from './components/oplosmatrix/OplosmatrixHint';
 
-import Ending from './components/gameplay/Ending';
 
   function App() {
    return(
