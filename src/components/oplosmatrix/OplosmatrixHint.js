@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const OplosmatrixHint = () => {
     const navigate = useNavigate();
 
-    returnMainScreen = () =>{
+    const returnMainScreen = () =>{
         navigate("/oplosmatrix");
     }
 
@@ -20,7 +20,7 @@ const OplosmatrixHint = () => {
                 <p className='monkeys'>Apen: 4 bananen</p>
                 {/* img with solution */}
                
-                <button className='exitButton' onClick={this.returnMainScreen}>x</button>
+                <button className='exitButton' onClick={() => returnMainScreen()}>x</button>
             </section>
         )
   

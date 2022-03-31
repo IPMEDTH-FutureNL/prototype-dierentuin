@@ -54,7 +54,7 @@ const OplosMatrixLock = () => {
 
             </section>
             
-            <button className='exitButton' onClick={returnMainScreen}>x</button>
+            <button className='exitButton' onClick={() => returnMainScreen()}>x</button>
         </section>
     )
 }
