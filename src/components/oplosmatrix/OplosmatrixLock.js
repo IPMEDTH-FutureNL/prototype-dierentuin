@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../css/oplosmatrixLock.css';
 
+
 const OplosMatrixLock = () => {
     const navigate = useNavigate();
     
@@ -16,7 +17,7 @@ const OplosMatrixLock = () => {
             console.log('gefeliciteerd')
             navigate('/end')
         } else {
-            console.log('jammer, probeer het nog maar een keer')
+            alert('jammer, probeer het nog maar een keer')
         }
     }
 

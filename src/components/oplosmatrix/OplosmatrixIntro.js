@@ -4,6 +4,8 @@ import '../../css/oplosmatrixIntro.css';
 import zookeeperImage from '../../img/zookeeper.png'
 import textCloud from '../../img/textCloud.png'
 
+import { Link } from 'react-router-dom'
+
 export class OplosmatrixIntro extends Component{
     constructor(props){
         super(props);
@@ -14,6 +16,11 @@ export class OplosmatrixIntro extends Component{
         }
     }
 
+    componentDidMount = () => {
+        document.getElementById('newLink').style.display = "none";
+    }
+    
+
     handleClick = () =>{
         this.setState({ count : this.state.count + 1});
         switch(this.state.count){
@@ -21,7 +28,9 @@ export class OplosmatrixIntro extends Component{
                 this.setState({text : "Kraak het slot terwijl ik de olifanten afleid."});
                 break;
             case 1:
-                window.location.href="/oplosmatrix";
+                //window.location.href="/oplosmatrix";
+                document.getElementById('forState').style.display = "none";
+                document.getElementById('newLink').style.display = "block";
         }
     }
     
@@ -34,7 +43,8 @@ export class OplosmatrixIntro extends Component{
                         <img className='text-cloud' src = {textCloud} />
                         <div className='textCloud-innertext'>
                             <p className='text'>{this.state.text}</p>
-                            <button className="button-primary" onClick={() => this.handleClick()}>{this.state.buttonText}</button>
+                            <button className="button-primary" id="forState" onClick={() => this.handleClick()}>{this.state.buttonText}</button>
+                            <Link className="button-primary link" id="newLink" to="/oplosmatrix">{this.state.buttonText}</Link>
                         </div>
                     </div>
                 </section>

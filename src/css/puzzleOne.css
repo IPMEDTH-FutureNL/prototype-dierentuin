@@ -21,6 +21,7 @@
     background-color: black;
     color: transparent;
     opacity: 0.2;
+    display: none;
 }
 
 
@@ -44,7 +45,7 @@
     position: absolute;
     background-color: lightgoldenrodyellow;
     width: 500px;
-    height: 250px;
+    height: 350px;
     border-radius: 10px;
     top: 250px;
     left: 600px;
@@ -108,7 +109,7 @@
 .textCloud-innertext{
     position: absolute;
     width: 800px;
-    top: 150px;
+    top: 300px;
     left: 570px;
     width: 300px;
     text-align: left;

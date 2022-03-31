@@ -3,6 +3,7 @@ import '../../css/puzzleOne.css';
 import zookeeperImage from '../../img/zookeeper.png'
 import textCloud from '../../img/textCloud.png'
 
+import { Link } from 'react-router-dom'
 
 export class OvergangPuzzelEen extends Component {
   constructor(props){
@@ -13,6 +14,11 @@ export class OvergangPuzzelEen extends Component {
         buttonText : "Verder"
       }
   }
+
+  componentDidMount = () => {
+    document.getElementById('newLink').style.display = "none";
+  }
+
 
   hideOverLay(){
       let hideDiv = document.getElementById("overlay");
@@ -34,9 +40,8 @@ export class OvergangPuzzelEen extends Component {
           case 1: 
             this.setState({text : "Hier heb je mijn kaart dan moet je het olifanten verblijf kunnen vinden."});
             this.setState({buttonText : "Pak kaart"});
-            break;
-          case 2:
-            window.location.href="/puzzleMap";
+            document.getElementById('forState').style.display = "none";
+            document.getElementById('newLink').style.display = "block";
             break;
       }
     }
@@ -64,7 +69,8 @@ export class OvergangPuzzelEen extends Component {
                 <img className="text-cloud" src={textCloud} />
                 <div className="textCloud-innertext">
                 <p className="text">{this.state.text}</p>
-                <button className="button-primary" onClick={() => this.handleClick()}>{this.state.buttonText}</button>
+                <button className="button-primary" id="forState" onClick={() => this.handleClick()}>{this.state.buttonText}</button>
+                <Link className="button-primary link" id="newLink" to="/puzzleMap">{this.state.buttonText}</Link>
                 </div>
           </div>
         </section>

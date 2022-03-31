@@ -3,6 +3,8 @@ import '../../css/start.css';
 import zookeeperImage from '../../img/zookeeper.png'
 import textCloud from '../../img/textCloud.png'
 
+import { Link } from 'react-router-dom'
+
 export class Start extends Component {
   constructor(props){
     super(props);
@@ -11,6 +13,10 @@ export class Start extends Component {
       text : "Welkom, wat leuk dat je een verhaal wilt schrijven over onze dierentuin!",
       buttonText : "Verder"
     }
+  }
+
+  componentDidMount = () => {
+    document.getElementById('newLink').style.display = "none";
   }
 
   handleClick = () => {
@@ -26,10 +32,10 @@ export class Start extends Component {
       case 2: 
         this.setState({text : "Als jij alvast naar binnen gaat zal ik de papieren pakken."});
         this.setState({buttonText : "Naar binnen"});
+        document.getElementById('forState').style.display = "none";
+        document.getElementById('newLink').style.display = "block";
         break;
-      case 3:
-        window.location.href="/firstPuzzle";
-        break;
+
   }
   }
 
@@ -44,7 +50,8 @@ export class Start extends Component {
             <img className="text-cloud" src={textCloud} />
             <div className="textCloud-innertext">
               <p className="text">{this.state.text}</p>
-              <button className="button-primary" onClick={() => this.handleClick()}>{this.state.buttonText}</button>
+              <button className="button-primary" id="forState" onClick={() => this.handleClick()}>{this.state.buttonText}</button>
+              <Link className="button-primary link" id="newLink" to="/firstPuzzle">{this.state.buttonText}</Link>
             </div>
           </div>
         </section>
