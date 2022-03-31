@@ -1,15 +1,17 @@
 //hint voor oplosmatrixpuzzel
 import React, { Component } from 'react';
 import '../../css/oplosmatrixHint.css';
+import { useNavigate } from 'react-router-dom';
 
-export class OplosmatrixHint extends Component{
+const OplosmatrixHint = () => {
+    const navigate = useNavigate();
 
     returnMainScreen = () =>{
-        window.location.href= ("/oplosmatrix")
+        navigate("/oplosmatrix");
     }
 
 
-    render(){
+    
         return(
             <section className='oplosmatrixHint'>
                 <p className='titel'>Voeding dieren:</p>
@@ -21,7 +23,7 @@ export class OplosmatrixHint extends Component{
                 <button className='exitButton' onClick={this.returnMainScreen}>x</button>
             </section>
         )
-    }
+  
 }
 
 export default OplosmatrixHint

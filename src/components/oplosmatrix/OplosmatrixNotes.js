@@ -4,14 +4,15 @@ import '../../css/oplosmatrixNotes.css';
 import elephantIcon from'../../img/elephantIcon.png';
 import tigerIcon from'../../img/tigerIcon.png';
 import monkeyIcon from'../../img/monkeyIcon.png';
+import { useNavigate } from 'react-router-dom';
 
-export class OplosmatrixNotes extends Component{
+const OplosmatrixNotes = () => {
+    const navigate = useNavigate();
 
     returnMainScreen = () =>{
-        window.location.href= ("/oplosmatrix")
+        navigate("/oplosmatrix")
     }
 
-    render(){
         return(
             <section className='note'>
                 <section className='note-center'>
@@ -48,7 +49,6 @@ export class OplosmatrixNotes extends Component{
             </section>
             
         )
-    }
 }
 
 export default OplosmatrixNotes

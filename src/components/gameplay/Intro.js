@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../../css/intro.css';
+import { Link } from 'react-router-dom'
 
 export class Intro extends Component {
 
@@ -10,10 +11,7 @@ export class Intro extends Component {
         console.log(minutes);
     }
 
-  startWithEscape(){
-    window.location.href="/start";
-  }
-
+    
   render() {
     return (
       <div className="introEscape">
@@ -22,7 +20,7 @@ export class Intro extends Component {
                   Welkom bij de dierentuin escape!
               </h1>
               <p>Los zo snel mogelijk de puzzels op om de meeste punten te behalen!</p>
-              <button className='btn-primary' onClick={() => {this.startWithEscape()}}>Begin met de escape</button>
+              <Link className='btn-primary' to="/start">Begin met de escape</Link>
           </div>
 
       </div>
